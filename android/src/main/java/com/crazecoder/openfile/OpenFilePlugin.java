@@ -402,9 +402,9 @@ public class OpenFilePlugin implements MethodCallHandler
         return true;
     }
 
-//     @RequiresApi(api = Build.VERSION_CODES.M)
-//     @Override
-//     public boolean onActivityResult(int requestCode, int resultCode, Intent intent) {
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    @Override
+    public boolean onActivityResult(int requestCode, int resultCode, Intent intent) {
 //         if (requestCode == RESULT_CODE) {
 //             if (canInstallApk()) {
 //                 startActivity();
@@ -412,8 +412,8 @@ public class OpenFilePlugin implements MethodCallHandler
 //                 result(-3, "Permission denied: " + Manifest.permission.REQUEST_INSTALL_PACKAGES);
 //             }
 //         }
-//         return false;
-//     }
+        return false;
+    }
 
     private void result(int type, String message) {
         if (result != null && !isResultSubmitted) {
